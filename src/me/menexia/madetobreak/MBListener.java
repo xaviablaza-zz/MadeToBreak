@@ -48,7 +48,7 @@ public class MBListener implements Listener {
 				return;
 			} else if (plugin.l.get(blk) == -2) {
 				event.setCancelled(true);
-				player.sendMessage(plugin.colorize(plugin.getConfig().getString(applianceType+"Expiry.Display_Message")));
+				player.sendMessage(plugin.colorize(plugin.getConfig().getString(applianceType+"Effects.Display_Message")));
 //				player.getWorld().playEffect(loc.add(0, 1, 0), Effect.SMOKE, 4);
 //				player.getWorld().playEffect(loc, Effect.EXTINGUISH, 0);
 //				//TODO: play effects prescribed in config

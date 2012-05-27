@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MadeToBreak" default="deploy" basedir=".">
+	<property name="pluginname" value="MadeToBreak"/>
+	<property name="bukkit.jar" location="../libraries/bukkit-1.2.5-R3.0.jar"/>
+	<property name="buildLocation" location="./build/"/>
+	<property name="version" value="1.0"/>
+
+	<property name="src" location="src"/>
+	<property name="bin" location="bin"/>
+	<property name="dist" location="dist"/>
+
+	<target name="init">
+		<mkdir dir="${bin}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${bin}" includeantruntime="false">
+			<classpath>
+				<pathelement location="${bukkit.jar}"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile">
+		<mkdir dir="${dist}"/>
+		<jar jarfile="${dist}/${pluginname}-${version}.jar">
+			<fileset dir="${bin}"/>
+			<fileset dir="resources"/>
+			<fileset dir="${src}"/>
+		</jar>
+	</target>
+
+	<target name="deploy" depends="dist">
+		<copy file="${dist}/${pluginname}-${version}.jar" todir="../pluginstest/plugins/"/>
+		<copy file="${dist}/${pluginname}-${version}.jar" todir="C:\Dropbox\Public\MadeToBreak"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${bin}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>

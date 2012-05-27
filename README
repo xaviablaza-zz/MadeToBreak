@@ -1,0 +1,22 @@
+MadeToBreak Changelog:
+GMT+8 HK/MNL Based Time
+
+MadeToBreak is a plugin designed for Bukkit servers. It replicates the idea of planned obsolescence
+for different appliances in Minecraft.
+
+This plugin has a configurable limit on how many times you can open a furnace or crafting bench (and soon, enchantment table)
+Once that amount of uses are exhausted, the appliance becomes broken and can be set to do the following:
+- Explode with or without environmental damage
+- Disappear
+- Display a message to the user on right click (if not set to explode or disappear after its final use)
+
+This forces players on the server to constantly create new appliances, thus making them
+always use resources to create these blocks unlike vanilla Minecraft.
+
+05/27/12 2:48PM - v1.0
+- First commit
+TODO: - Use Block objects instead of Location Objects
+- Add verbose-logging in config.yml
+- Add enchantment table tracking
+- Block pistons from pushing or pulling appliances
+- Add sound/visual effects

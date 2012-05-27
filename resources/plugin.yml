@@ -1,0 +1,12 @@
+name: MadeToBreak
+main: me.menexia.madetobreak.MadeToBreak
+version: 1.0
+description: Obsolescencia Programada
+commands:
+    mb:
+        description: Use /mb infinite to activate infinite usage placement of appliances.
+        usage: <command>
+permissions:
+    madetobreak.exempt:
+        description: Allows usage of /mb infinite
+        default: op

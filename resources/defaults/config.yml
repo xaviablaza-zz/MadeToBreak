@@ -1,0 +1,41 @@
+# MadeToBreak configuration file
+########################################
+#           Amount of Uses             #
+#      (right clicks on a block)       #
+#     before the appliance breaks     #
+########################################
+CraftingTable_Uses: 30
+Furnace_Uses: 30
+########################################
+#  Crafting Table Effects when broken  #
+########################################
+CraftingTableExpiry:
+    Explosion:
+        Setting: 0
+    # Set Explosion Setting to 0 for no explosion on expiry
+    # 1 for visual explosion (i.e. an explosion without environmental damage)
+    # 2 for explosion with environmental damage (like a TNT explosion)
+    # On explosion, the appliance will explode and not drop its block
+        Force: 1
+    # If the Explosion Setting is 2, set the force/power for the explosion:
+    # 1 - Ghast Fireball Explosion Power
+    # 3 - Creeper Explosion Power
+    # 4 - TNT Explosion Power
+    # 5 - Bed (Nether or End) Explosion Power
+    # 6 - Ender Crystal Explosion
+    Disappear: false
+    # If there is no explosion...
+    # make the block disappear on the final use of the appliance?
+    Display_Message: '&cThis crafting table is broken.'
+    # This message supports color codes and is shown when the player right-clicks the block after it is broken.
+    # Refer to http://www.minecraftwiki.net/images/4/4c/Colors.png for color codes available.
+    # Use '&' instead of '#'
+########################################
+#    Furnace Effects on when broken    #
+########################################
+FurnaceExpiry:
+    Explosion:
+        Setting: 0
+        Force: 1
+    Disappear: false
+    Display_Message: '&cThis furnace is broken.'

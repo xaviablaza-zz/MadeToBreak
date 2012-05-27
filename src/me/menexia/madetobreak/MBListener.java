@@ -80,6 +80,9 @@ public class MBListener implements Listener {
 			}
 			
 		} else { // It's a new & normal block, put into the map.
+			if (plugin.getConfig().getInt(applianceType+"_Uses") == -1) {
+				return;
+			}
 			plugin.l.put(blk, 1);
 		}
 	}

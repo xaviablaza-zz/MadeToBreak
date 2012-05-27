@@ -3,7 +3,7 @@
 	<property name="pluginname" value="MadeToBreak"/>
 	<property name="bukkit.jar" location="../libraries/bukkit-1.2.5-R3.0.jar"/>
 	<property name="buildLocation" location="./build/"/>
-	<property name="version" value="1.1"/>
+	<property name="version" value="1.11"/>
 
 	<property name="src" location="src"/>
 	<property name="bin" location="bin"/>

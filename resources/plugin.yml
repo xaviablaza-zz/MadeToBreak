@@ -1,12 +1,22 @@
 name: MadeToBreak
 main: me.menexia.madetobreak.MadeToBreak
-version: 1.0
-description: Obsolescencia Programada
+version: 1.1
+description: Obsolescencia Programada / Planned Obsolescence
 commands:
     mb:
         description: Use /mb infinite to activate infinite usage placement of appliances.
         usage: <command>
+        aliases: [mtb, madetobreak]
 permissions:
-    madetobreak.exempt:
-        description: Allows usage of /mb infinite
+    madetobreak.exempt.*:
+        description: Having this permission allows the player to not deplete the amount of uses of an appliance
+        children:
+            madetobreak.exempt.craftingtable: true
+            madetobreak.exempt.furnace: true
+            madetobreak.exempt.enchantmenttable: true
+            madetobreak.exempt.brewingstand: true
+            madetobreak.exempt.dispenser: true
+        default: op
+    madetobreak.placeinfinite:
+        description: Allows usage of /mb infinite, which activates the infinite usage placement of appliances
         default: op
